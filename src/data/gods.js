@@ -5,8 +5,8 @@ export const GODS = [
     nome: 'Zeus',
     dominio: 'Céu e Trovões',
     descricao:
-      'Pai dos deuses e senhor do raio, Zeus é a autoridade que ordena o caos em lei. Seus descendentes em Filhos do Destino nascem com uma presença que impõe respeito antes mesmo de uma palavra ser dita — e um apetite por poder que raramente se satisfaz.',
-    traits: { coragem: 0.7, sabedoria: 0.5, ordem: 0.8, astucia: 0.2, compaixao: 0.0, ambicao: 0.9, preguica: -0.3, confianca: 0.9 },
+      'Pai dos deuses e senhor do raio, Zeus é a autoridade que ordena as leis do mundo. Seus descendentes em Filhos do Destino nascem com uma vontade natural de liderar, grande carisma e bom humor! Mas sua paciência é seriamente testada quando alguém desafia seus planos.',
+    traits: { coragem: 0.7, sabedoria: 0.5, ordem: 0.8, astucia: 0.2, compaixao: 0.1, ambicao: 0.9, preguica: -0.3, confianca: 0.9 },
     imagem: 'src/assets/imagens/deuses/zeus.png',
   },
   {
@@ -14,17 +14,17 @@ export const GODS = [
     nome: 'Poseidon',
     dominio: 'Mares e Tempestades',
     descricao:
-      'Instável como as marés que comanda, Poseidon é força bruta e emoção sem filtro. Seus filhos carregam um temperamento que pode erguer ondas de coragem ou de fúria — raramente ficam parados quando algo os atinge.',
-    traits: { coragem: 0.8, sabedoria: 0.2, ordem: -0.3, astucia: 0.1, compaixao: 0.1, ambicao: 0.5, preguica: -0.2, confianca: 0.7 },
+      'Instável como as marés que comanda, Poseidon é força bruta e emoção sem filtro. O deus mais perigoso entre os três grandes. Seus filhos carregam um temperamento ambíguo demais: podem ser protetores e decisivos, ou imprevisíveis e destrutivos. A única diferença está em como e onde cresceram.',
+    traits: { coragem: 0.8, sabedoria: 0.2, ordem: -0.3, astucia: 0.1, compaixao: 0.0, ambicao: 0.5, preguica: -0.2, confianca: 0.7 },
     imagem: 'src/assets/imagens/deuses/poseidon.png',
   },
   {
     id: 'hades',
     nome: 'Hades',
-    dominio: 'Submundo e Riquezas Ocultas',
+    dominio: 'Submundo',
     descricao:
-      'Senhor do que fica embaixo — riquezas, segredos, os mortos. Hades governa com paciência fria e um senso de justiça que não perdoa. Seus descendentes enxergam o que os outros preferem ignorar.',
-    traits: { coragem: 0.4, sabedoria: 0.6, ordem: 0.7, astucia: 0.5, compaixao: -0.2, ambicao: 0.3, preguica: 0.1, confianca: 0.5 },
+      'Tudo aquilo abaixo do seu pé. É isso que Hades governa: o chão, os minérios, o submundo e a morte. Seus filhos são reservados, observadores e calmos. Costumam ter inteligência emocional acima da média, e pensam muito na família e amigos próximos. Não são líderes natos, mas podem se tornar se for preciso!',
+    traits: { coragem: 0.2, sabedoria: 0.6, ordem: 0.7, astucia: 0.8, compaixao: -0.2, ambicao: 0.3, preguica: 0.1, confianca: 0.5 },
     imagem: 'src/assets/imagens/deuses/hades.png',
   },
   {
@@ -32,8 +32,8 @@ export const GODS = [
     nome: 'Atena',
     dominio: 'Sabedoria e Guerra Estratégica',
     descricao:
-      'Nascida já em armadura, Atena é a guerra pensada antes de ser travada. Seus filhos raramente agem por impulso — preferem três passos à frente, um plano para cada cenário e a certeza de que a mente vence onde a força falha.',
-    traits: { coragem: 0.6, sabedoria: 1, ordem: 0.8, astucia: 0.7, compaixao: 0.2, ambicao: 0.4, preguica: -0.6, confianca: 0.6 },
+      'Nascida diretamente do cérebro de Zeus, Atena herda a astúcia, inteligência e capacidade de liderança do pai. Seus filhos são estrategistas natos, analisando TODAS as situações, desde uma guerra mundial até um "oi" no whatsapp. São confiáveis, mas podem ser frios em suas decisões. Você provavelmente gosta muito de literatura.',
+    traits: { coragem: 0.6, sabedoria: 1, ordem: 0.8, astucia: 0.7, compaixao: -0.2, ambicao: 0.4, preguica: -0.6, confianca: 0.6 },
     imagem: 'src/assets/imagens/deuses/atena.png',
   },
   {
@@ -41,25 +41,16 @@ export const GODS = [
     nome: 'Apolo',
     dominio: 'Sol, Profecia e Artes',
     descricao:
-      'Deus da luz, da música e da visão além do presente. Apolo entende padrões que outros não veem. Seus descendentes têm talento natural e uma inquietação criativa que os empurra sempre para o próximo horizonte.',
-    traits: { coragem: 0.4, sabedoria: 0.7, ordem: 0.4, astucia: 0.3, compaixao: 0.4, ambicao: 0.5, preguica: -0.1, confianca: 0.7 },
+      'Deus da luz, da música e da profecia, Apolo é o próprio conceito da perfeição. Se a vida é uma arte, então Apolo é toda a vida. E claro, sua prole seria confiante, egocêntrica e naturalmente talentosa como o tal. Carismáticos, mas arrogantes, provavelmente se acham os melhores em tudo. Beijam muito bem.',
+    traits: { coragem: 0.4, sabedoria: 0.7, ordem: 0.4, astucia: 0.3, compaixao: 0.4, ambicao: 0.5, preguica: 0.5, confianca: 0.7 },
     imagem: 'src/assets/imagens/deuses/apolo.png',
-  },
-  {
-    id: 'artemis',
-    nome: 'Ártemis',
-    dominio: 'Caça e Lua',
-    descricao:
-      'Independente e implacável, Ártemis caminha sozinha entre as sombras da noite. Seus filhos confiam nos próprios instintos acima de qualquer autoridade e protegem ferozmente o que consideram seu.',
-    traits: { coragem: 0.8, sabedoria: 0.4, ordem: 0.3, astucia: 0.5, compaixao: 0.3, ambicao: 0.2, preguica: -0.4, confianca: 0.6 },
-    imagem: 'src/assets/imagens/deuses/artemis.png',
   },
   {
     id: 'ares',
     nome: 'Ares',
     dominio: 'Guerra e Violência',
     descricao:
-      'Onde Atena calcula, Ares avança. É o impulso puro da batalha, sem estratégia nem remorso. Seus descendentes sentem a adrenalina do conflito como poucos — e têm dificuldade em recuar de uma briga.',
+      'Ares é a personificação do ódio, seja ele qual for. Seus filhos são impulsivos e impacientes, e odeiam injustiça, maldade e covardia. Vão sair na porrada caso acreditem que é a coisa certa a se fazer. Se existe um jeito de acabar com o mal, é pela raiz.',
     traits: { coragem: 1, sabedoria: -0.4, ordem: -0.5, astucia: -0.2, compaixao: -0.5, ambicao: 0.6, preguica: -0.3, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/ares.png',
   },
@@ -68,8 +59,8 @@ export const GODS = [
     nome: 'Afrodite',
     dominio: 'Amor e Beleza',
     descricao:
-      'Afrodite move o mundo através do desejo e da conexão. Seus filhos entendem pessoas de um jeito instintivo, sabem exatamente o que dizer e usam charme como quem usa uma arma afiada.',
-    traits: { coragem: 0.2, sabedoria: 0.1, ordem: -0.2, astucia: 0.6, compaixao: 0.5, ambicao: 0.4, preguica: 0.3, confianca: 0.8 },
+      'Afrodite tem domínio do extremo oposto de seu secreto amante: o amor. Apaixonados, dedicados e singelos são seus filhos, que sempre vão estar confusos com alguma escolha de sim ou não. Os mais protetores entre todos os semideuses, amam com tamanha convicção que jamais podem deixar alguém do grupo morrer. Contudo, ninugém realmente AMA um filho de Afrodite...',
+    traits: { coragem: 0.2, sabedoria: 0.1, ordem: -0.2, astucia: 0.6, compaixao: 1, ambicao: 0.4, preguica: 0.3, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/afrodite.png',
   },
   {
@@ -77,8 +68,8 @@ export const GODS = [
     nome: 'Hefesto',
     dominio: 'Forja e Criação',
     descricao:
-      'Mestre artesão dos deuses, Hefesto constrói o que outros só imaginam. Seus descendentes preferem o trabalho silencioso e paciente à glória rápida — julgados pelo que criam, não pelo que dizem.',
-    traits: { coragem: 0.3, sabedoria: 0.6, ordem: 0.6, astucia: 0.4, compaixao: 0.4, ambicao: 0.2, preguica: -0.1, confianca: 0.2 },
+      'Inteligente, sábio e rancoroso como um antigo orvalho, Hefesto sempre vai se lembrar de alguém que o machucou. Seus filhos são muito parecidos: pensam demais, sempre estão distraídos ou iniciando novos projetos e vão odiar você pelo resto da vida, caso machuque-os por seus atos.',
+    traits: { coragem: 0.3, sabedoria: 0.8, ordem: 0.8, astucia: 0.4, compaixao: 0.2, ambicao: 0.4, preguica: -0.7, confianca: 0.2 },
     imagem: 'src/assets/imagens/deuses/hefesto.png',
   },
   {
@@ -86,8 +77,8 @@ export const GODS = [
     nome: 'Hermes',
     dominio: 'Mensageiro e Comércio',
     descricao:
-      'Rápido, esperto e sempre um passo à frente, Hermes atravessa fronteiras que ninguém mais consegue. Seus filhos são negociadores natos, confortáveis tanto em becos quanto em salas de reunião.',
-    traits: { coragem: 0.3, sabedoria: 0.4, ordem: -0.4, astucia: 1, compaixao: 0.1, ambicao: 0.5, preguica: 0.2, confianca: 0.6 },
+      'Rápido, esperto e sempre um passo à frente, Hermes percorre todas as possibilidades em segundos. Seus filhos pensam sobre tudo, mas agem por impulso sempre na pior escolha possível. Engraçados, divertidos e ardilosos. Enganam qualquer um só pelo bom humor, roubando dinheiro, olhares ou posições de poder.',
+    traits: { coragem: 0.3, sabedoria: 0.4, ordem: -0.4, astucia: 1, compaixao: 0.1, ambicao: 0.5, preguica: 0.1, confianca: 0.6 },
     imagem: 'src/assets/imagens/deuses/hermes.png',
   },
   {
@@ -95,7 +86,7 @@ export const GODS = [
     nome: 'Deméter',
     dominio: 'Colheita e Fertilidade',
     descricao:
-      'Deméter é o cuidado que sustenta a vida — paciente, generosa, incansável. Seus descendentes colocam o bem-estar coletivo acima da própria ambição e são o alicerce de quem está ao redor.',
+      'Deméter se apresenta como alguém paciente, generosa, incansável. Seus descendentes colocam o bem-estar coletivo acima da própria ambição e sempre são os mais queridinhos em um grupo. Contudo, vão se fazer de coitados para conseguirem o quê querem. São perigosos quando irritados.',
     traits: { coragem: 0.1, sabedoria: 0.5, ordem: 0.5, astucia: 0, compaixao: 0.9, ambicao: -0.1, preguica: 0, confianca: 0.3 },
     imagem: 'src/assets/imagens/deuses/demeter.png',
   },
@@ -104,35 +95,53 @@ export const GODS = [
     nome: 'Dioniso',
     dominio: 'Vinho e Êxtase',
     descricao:
-      'Dioniso rompe regras como quem rompe garrafas — de propósito e sem culpa. Seus filhos vivem intensamente o presente, atraem multidões e desconfiam de qualquer coisa que pareça controle demais.',
-    traits: { coragem: 0.3, sabedoria: 0.1, ordem: -0.8, astucia: 0.3, compaixao: 0.4, ambicao: -0.1, preguica: 0.7, confianca: 0.5 },
+      'Dioniso rompe regras como quem rompe garrafas. Culpa, ansiedade ou represálias? Dane-se! Seus filhos vivem intensamente o presente, atraem multidões e desconfiam de qualquer coisa que pareça fácil demais. São populistas natos, e conseguem se passar por qualquer um para alcançar um objetivo, se conseguirem definir um.',
+    traits: { coragem: 0.3, sabedoria: 0.1, ordem: -0.9, astucia: 0.3, compaixao: 0.4, ambicao: -0.1, preguica: 0.8, confianca: 0.5 },
     imagem: 'src/assets/imagens/deuses/dionisio.png',
   },
   {
-    id: 'hera',
-    nome: 'Hera',
-    dominio: 'Casamento e Poder',
+    id: 'nike',
+    nome: 'Nike',
+    dominio: 'Força e Vitória',
     descricao:
-      'Rainha por direito e por temperamento, Hera não esquece uma traição nem abre mão do que é seu. Seus descendentes lideram com disciplina de ferro e um senso agudo de lealdade — e de vingança.',
-    traits: { coragem: 0.4, sabedoria: 0.6, ordem: 0.9, astucia: 0.5, compaixao: -0.1, ambicao: 0.8, preguica: -0.2, confianca: 0.8 },
-    imagem: 'src/assets/imagens/deuses/hera.png',
+      'Nike é sempre a primeira das divindades, em qualquer tema. Espalhando coragem e determinação por onde passa, seus filhos são grandes atletas, empresários ou investidores. Acreditam no trabalho duro, na perseverança e no aprendizado através do erro. ',
+    traits: { coragem: 0.8, sabedoria: 0.6, ordem: 0.3, astucia: 0.3, compaixao: -0.1, ambicao: 1, preguica: -0.8, confianca: 1 },
+    imagem: 'src/assets/imagens/deuses/nike.png',
   },
   {
-    id: 'hestia',
-    nome: 'Héstia',
-    dominio: 'Lar e Comunidade',
+    id: 'hecate',
+    nome: 'Hécate',
+    dominio: 'Magia e encruzilhadas',
     descricao:
-      'Guardiã silenciosa da lareira, Héstia raramente busca os holofotes, mas é ela quem mantém tudo unido. Seus filhos criam refúgio onde quer que estejam e preferem construir comunidade a buscar glória pessoal.',
-    traits: { coragem: -0.1, sabedoria: 0.5, ordem: 0.6, astucia: -0.1, compaixao: 0.8, ambicao: -0.6, preguica: 0.4, confianca: 0.2 },
-    imagem: 'src/assets/imagens/deuses/hestia.png',
+      'Guardiã silenciosa do oculto, Hécate toca tudo aquilo que não conseguimos compreender. Sua prolé é quieta, calma, reflexiva e estudiosa. Acreditam que toda palavra tem poder, confiam em cristais e estrelas. Supersticiosos, nunca diga algo ambíguo para um filho de Hécate: ele irá achar o resultado dessa encruzilhada.',
+    traits: { coragem: -0.1, sabedoria: 0.9, ordem: 0.6, astucia: -0.1, compaixao: 0.8, ambicao: -0.6, preguica: 0.1, confianca: -0.3 },
+    imagem: 'src/assets/imagens/deuses/hecate.png',
   },
   {
-    id: 'persefone',
-    nome: 'Perséfone',
-    dominio: 'Primavera e Submundo',
+    id: 'nyx',
+    nome: 'Nyx',
+    dominio: 'Astros e intímo',
     descricao:
-      'Dividida entre dois mundos, Perséfone é ao mesmo tempo renovação e sombra. Seus descendentes carregam essa dualidade com naturalidade — gentis à luz do dia, insondáveis quando as coisas escurecem.',
-    traits: { coragem: 0.3, sabedoria: 0.5, ordem: 0.2, astucia: 0.4, compaixao: 0.6, ambicao: 0.1, preguica: -0.1, confianca: 0.3 },
-    imagem: 'src/assets/imagens/deuses/persefone.png',
+      'Nyx é a rainha dos segredos, dos astros, estrelas e do próprio íntimo do humano. Ela lhe abraça quando guardas um segredo pessoal, quando coloca uma face que não é sua para agradar à outrém. Seus filhos são antenciosos, bons ouvintes e aconchegantes, como um céu estrelado.',
+    traits: { coragem: 0.3, sabedoria: 0.5, ordem: 0.2, astucia: 0.4, compaixao: 0.8, ambicao: 0.1, preguica: -0.1, confianca: 1 },
+    imagem: 'src/assets/imagens/deuses/nyx.png',
+  },
+  {
+    id: 'thanatos',
+    nome: 'Thanatos',
+    dominio: 'Morte',
+    descricao:
+      'O último suspiro é o mais belo de todos para Thânato. Nenhum mortal vai à Hades sem a presença deste ser carregando sua alma em seus braços. Seus filhos são serenos, cumprem promessas à risca e raramente demonstram o peso que carregam por dentro. Sempre gostam do final de todas as histórias, e odeiam fofocas inacabadas.',
+    traits: { coragem: 0.5, sabedoria: 0.6, ordem: 0.3, astucia: -0.1, compaixao: -0.9, ambicao: -0.2, preguica: -0.5, confianca: 0.8 },
+    imagem: 'src/assets/imagens/deuses/thanatos.png',
+  },
+  {
+    id: 'nemesis',
+    nome: 'Nêmesis',
+    dominio: 'Justiça e Equilíbrio',
+    descricao:
+      'A Filha da Noite e guardiã da justiça divina, Nêmesis é o equilíbrio que pune o orgulho desmedido e recompensa a humildade. Seus filhos carregam o peso da justiça, sendo observadores implacáveis, nunca deixando um erro passar impune. Preferem morrer ao errar, e acreditam que seguir o certo é seguir o que foi prescrito pelos nossos antepassados.',
+    traits: { coragem: 0.5, sabedoria: 0.8, ordem: 1, astucia: 0.2, compaixao: -0.2, ambicao: 0.2, preguica: -0.4, confianca: 0.6 },
+    imagem: 'src/assets/imagens/deuses/nemesis.png',
   },
 ];
