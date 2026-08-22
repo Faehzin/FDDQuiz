@@ -8,14 +8,14 @@ const QUIZZES = [
     to: '/quiz/deuses',
     titulo: 'Qual seu parente divino?',
     descricao:
-      'Responda ao chamado do sangue. Descubra qual dos quinze deuses do panteão corre nas suas veias e molda seu destino.',
+      'Descubra qual deus da mitologia grega originou o sangue dourado que percorre suas veias, dentre os 15 disponíveis no sistema de Filhos do Destino.',
     cta: 'Descobrir meu deus',
   },
   {
     to: '/quiz/organizacoes',
     titulo: 'Qual organização você integraria?',
     descricao:
-      'Nem todo descendente caminha sozinho. Descubra qual facção do mundo moderno de Filhos do Destino combina com quem você é.',
+      'Semideuses nunca caminham sozinhos, mas também não vão se prender à pessoas que odeiam. Descubra qual organização do mundo de Pandora mais combina com você!',
     cta: 'Descobrir minha organização',
   },
 ];
@@ -26,14 +26,14 @@ export default function Home() {
       <div>
         <p className="text-xs uppercase tracking-[0.4em] text-fdd-gold-light">Filhos do Destino</p>
         <h1 className="mt-4 font-display text-3xl leading-tight text-fdd-cream fdd-glow-text sm:text-5xl">
-          Sangue de deus, destino de mortal
+          Para todo Semideus, existe um destino pré-determinado. Descubra o seu!
         </h1>
         <LaurelDivider className="mx-auto mt-5 h-6 w-40 text-fdd-gold sm:h-7 sm:w-48" />
         <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-fdd-cream-dark sm:text-base">
-          Em um mundo onde a mitologia grega nunca desapareceu — apenas se escondeu nas frestas do
-          cotidiano — cada descendente carrega o sangue de um deus e escolhe (ou é escolhido por)
-          uma organização que dá forma ao seu caminho. Responda aos dois quizzes e descubra a sua
-          herança.
+          Em um mundo onde a mitologia grega é real, filhos de deuses com mortais caminham
+          pela terra de Pandora e enfrentam diversos desafios. Aqui, o mundo INTEIRO sabe sobre a existência
+          dos deuses, obrigando a humanidade a se adaptar à nova realidade. Descubra qual seria seu Parente Divino em
+          FIlhos do Destino, além de qual organização você defenderia, com base na sua personalidade e seus ideais!
         </p>
       </div>
 

@@ -12,17 +12,17 @@ export default function Result() {
     return (
       <div className="mx-auto flex max-w-lg flex-1 flex-col items-center justify-center gap-6 text-center">
         <h1 className="font-display text-2xl text-fdd-cream sm:text-3xl">
-          Você ainda não descobriu seu destino
+          Você ainda não descobriu o destino que as Moiras traçaram para você!
         </h1>
         <p className="text-sm text-fdd-cream-dark">
-          Responda a um dos quizzes para revelar seu resultado aqui.
+          Responda a um dos quizzes para revelar seu resultado abaixo.
         </p>
         <div className="flex flex-col gap-3 sm:flex-row">
           <Link
             to="/quiz/deuses"
             className="rounded-full border-2 border-fdd-gold-dark bg-fdd-gold px-6 py-2 font-display text-sm text-fdd-ink transition hover:bg-fdd-gold-light"
           >
-            Fazer quiz dos deuses
+            Fazer quiz de Parentes Divinos
           </Link>
           <Link
             to="/quiz/organizacoes"
