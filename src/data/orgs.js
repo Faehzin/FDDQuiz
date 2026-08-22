@@ -42,7 +42,7 @@ export const ORGANIZATIONS = [
     foco: 'Minotauros',
     descricao:
       'Um grupo extremamente estranho, viciado em minotauros. Adoram-os como deuses. Desconfie de si mesmo se você recebeu esta organização...',
-    traits: { coragem: 0.1, sabedoria: 0.1, ordem: -0.8, astucia: 0.5, compaixao: 0.7, ambicao: 0.4, preguica: -0.5, confianca: 0.1 },
+    traits: { coragem: 0.1, sabedoria: 0.1, ordem: -0.8, astucia: 0.5, compaixao: 0.7, ambicao: 0.4, preguica: 0.9, confianca: 0.1 },
     imagem: 'src/assets/imagens/orgs/minotauro.png',
   },
 ];
