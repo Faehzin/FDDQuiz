@@ -57,10 +57,10 @@ export const QUESTIONS_GODS = [
     id: 'g6',
     texto: 'Como você prefere passar seu tempo livre?',
     opcoes: [
-      { texto: 'Treinando, sem parar de verdade.', effect: { preguica: -2, ordem: 1 } },
+      { texto: 'Treinando o físico, esportes', effect: { preguica: -2, ordem: 1 } },
       { texto: 'Lendo, estudando, investigando mistérios.', effect: { sabedoria: 2 } },
       { texto: 'Em festas, boa companhia, resenha.', effect: { preguica: 2, compaixao: 1 } },
-      { texto: 'Planejando meu próximo grande passo.', effect: { ambicao: 2, astucia: -1 } },
+      { texto: 'Planejando meu próximo projeto.', effect: { ambicao: 2, astucia: -1 } },
       { texto: 'Tempo livre?', effect: { preguica: -1, sabedoria: 2 } },
     ],
   },
@@ -79,7 +79,7 @@ export const QUESTIONS_GODS = [
     id: 'g8',
     texto: 'O que você mais teme perder?',
     opcoes: [
-      { texto: 'Minha liberdade de agir sem seguir regra nenhuma.', effect: { ordem: -2, astucia: 1 } },
+      { texto: 'Minha liberdade.', effect: { ordem: -2, astucia: 1 } },
       { texto: 'As pessoas que eu protejo.', effect: { compaixao: 2 } },
       { texto: 'O controle da situação.', effect: { ordem: 2, confianca: 1 } },
       { texto: 'Minha reputação e o respeito dos outros.', effect: { confianca: 2, ambicao: 1 } },
@@ -90,10 +90,10 @@ export const QUESTIONS_GODS = [
     id: 'g9',
     texto: 'Como as outras pessoas costumam te descrever?',
     opcoes: [
-      { texto: 'Corajoso até o exagero.', effect: { coragem: 2 } },
+      { texto: 'Corajoso e leal', effect: { coragem: 2 } },
       { texto: 'Frio e calculista.', effect: { astucia: 2, compaixao: -1 } },
-      { texto: 'Confiável e presente, sempre no controle.', effect: { confianca: 2, compaixao: 1 } },
-      { texto: 'Difícil.', effect: { preguica: 2, coragem: 1 } },
+      { texto: 'Confiável e presente.', effect: { confianca: 2, compaixao: 1 } },
+      { texto: 'Difícil e amargo.', effect: { preguica: 2, coragem: 1 } },
       { texto: 'Engraçado e fofo.', effect: { preguica: 1, compaixao: 3 } },
     ],
   },
@@ -117,6 +117,7 @@ export const QUESTIONS_GODS = [
       { texto: 'Deixo ir, a vitória já foi provada.', effect: { compaixao: 1, confianca: 1 } },
       { texto: 'Uso a chance para negociar algo em troca da vida dele.', effect: { astucia: 2, ambicao: 1 } },
       { texto: 'Prendo para interrogar depois, com calma.', effect: { ordem: 2, sabedoria: 1 } },
+      { texto: 'Eu venci uma luta?', effect:{ compaixao: 1, sabedoria: -1}}
     ],
   },
   {
@@ -141,22 +142,22 @@ export const QUESTIONS_GODS = [
   },
   {
     id: 'g14',
-    texto: 'Você gostou deste quiz?',
-    opcoes: [
-      { texto: 'Meio mal feito...', effect: {  } },
-      { texto: 'Amei!', effect: {  } },
-      { texto: 'Deu uma preguiça...', effect: { } },
-      { texto: 'Eu cliquei rápido para ver como funcionava.', effect: { } },
-    ],
-  },
-  {
-    id: 'g15',
     texto: 'Uma decisão importante precisa ser tomada agora, sem tempo pra pensar muito. O que prevalece?',
     opcoes: [
       { texto: 'Sigo o que já está estabelecido. Regra é regra.', effect: { astucia: -2, ordem: 2 } },
       { texto: 'Duvido de mim mesmo até o último segundo.', effect: { confianca: -2, sabedoria: 1 } },
       { texto: 'Decido rápido e sigo em frente sem olhar pra trás.', effect: { coragem: 1, confianca: 1 } },
       { texto: 'Procuro um jeito esperto de ganhar mais tempo.', effect: { astucia: 1, ambicao: 1 } },
+    ],
+  },
+    {
+    id: 'g15',
+    texto: 'Você gostou deste quiz?',
+    opcoes: [
+      { texto: 'Meio mal feito...', effect: {  } },
+      { texto: 'Amei!', effect: {  } },
+      { texto: 'Deu uma preguiça...', effect: { } },
+      { texto: 'Eu cliquei rápido para ver como funcionava.', effect: { } },
     ],
   },
 ];
