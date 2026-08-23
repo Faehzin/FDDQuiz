@@ -50,7 +50,7 @@ export const QUESTIONS_GODS = [
       { texto: 'Cobro responsabilidade e consequências claras.', effect: { ordem: 2, confianca: 1 } },
       { texto: 'Uso a situação a meu favor, se possível.', effect: { astucia: 2, ambicao: 1 } },
       { texto: 'Me afasto.', effect: { preguica: 2, compaixao: -1 } },
-      { texto: 'Ajo no impulso, sem pensar em estratégia nenhuma.', effect: { astucia: -2, compaixao: -1 } },
+      { texto: 'Ajo no impulso, xingo sem pensar.', effect: { astucia: -2, compaixao: -1 } },
     ],
   },
   {
@@ -143,10 +143,10 @@ export const QUESTIONS_GODS = [
     id: 'g14',
     texto: 'Você gostou deste quiz?',
     opcoes: [
-      { texto: 'Meio mal feito...', effect: { ambicao: 1, compaixao: -1 } },
-      { texto: 'Amei!', effect: { compaixao: 1, confianca: 2 } },
-      { texto: 'Deu uma preguiça...', effect: { preguica: 3, coragem: 1 } },
-      { texto: 'Eu cliquei rápido para ver como funcionava.', effect: { sabedoria: 1, astucia: 1 } },
+      { texto: 'Meio mal feito...', effect: {  } },
+      { texto: 'Amei!', effect: {  } },
+      { texto: 'Deu uma preguiça...', effect: { } },
+      { texto: 'Eu cliquei rápido para ver como funcionava.', effect: { } },
     ],
   },
   {

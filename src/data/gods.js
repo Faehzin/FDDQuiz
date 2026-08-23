@@ -24,7 +24,7 @@ export const GODS = [
     dominio: 'Submundo',
     descricao:
       'Tudo aquilo abaixo do seu pé. É isso que Hades governa: o chão, os minérios, o submundo e a morte. Seus filhos são reservados, observadores e calmos. Costumam ter inteligência emocional acima da média, e pensam muito na família e amigos próximos. Não são líderes natos, mas podem se tornar se for preciso!',
-    traits: { coragem: 0.2, sabedoria: 0.6, ordem: 0.7, astucia: 0.8, compaixao: -0.2, ambicao: 0.3, preguica: 0.1, confianca: 0.5 },
+    traits: { coragem: 0.2, sabedoria: 0.4, ordem: 0.7, astucia: 0.8, compaixao: -0.2, ambicao: 0.3, preguica: 0.1, confianca: 0.3 },
     imagem: 'src/assets/imagens/deuses/hades.png',
   },
   {
@@ -92,11 +92,11 @@ export const GODS = [
   },
   {
     id: 'dionisio',
-    nome: 'Dioniso',
+    nome: 'Dionisio',
     dominio: 'Vinho e Êxtase',
     descricao:
       'Dioniso rompe regras como quem rompe garrafas. Culpa, ansiedade ou represálias? Dane-se! Seus filhos vivem intensamente o presente, atraem multidões e desconfiam de qualquer coisa que pareça fácil demais. São populistas natos, e conseguem se passar por qualquer um para alcançar um objetivo, se conseguirem definir um.',
-    traits: { coragem: 0.3, sabedoria: 0.1, ordem: -0.9, astucia: 0.3, compaixao: 0.4, ambicao: -0.1, preguica: 0.8, confianca: 0.5 },
+    traits: { coragem: 0.3, sabedoria: 0.2, ordem: -0.4, astucia: 0.3, compaixao: 0.4, ambicao: -0.1, preguica: 1, confianca: 0.5 },
     imagem: 'src/assets/imagens/deuses/dionisio.png',
   },
   {

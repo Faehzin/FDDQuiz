@@ -8,6 +8,7 @@ export const QUESTIONS_ORGS = [
       { texto: 'Liberdade e caos.', effect: { ordem: -2, ambicao: 1 } },
       { texto: 'Uma comunidade que cuida uns dos outros.', effect: { compaixao: 1, coragem:2} },
       { texto: 'Vantagem e oportunidades.', effect: { ambicao: 2, astucia: 1 } },
+      { texto: 'Minotauros <3.', effect: {preguica: 3}},
     ],
   },
   {
@@ -72,7 +73,7 @@ export const QUESTIONS_ORGS = [
       { texto: 'O estrategista.', effect: { astucia: 2, sabedoria: 1 } },
       { texto: 'O apoio emocional.', effect: { compaixao: 2 } },
       { texto: 'O lobo solitário.', effect: { ordem: -2, coragem: 1 } },
-      { texto: 'O piadista', effect: { preguica: 2, compaixao: 1 } },
+      { texto: 'O piadista', effect: { preguica: 1, compaixao: 1 } },
     ],
   },
   {
@@ -104,6 +105,7 @@ export const QUESTIONS_ORGS = [
       { texto: 'Ficar preso a rotinas e regras.', effect: { ordem: -2 } },
       { texto: 'Ver alguém sofrendo sem poder ajudar.', effect: { compaixao: 2 } },
       { texto: 'Perder uma vantagem para outra pessoa.', effect: { ambicao: 2 } },
+      { texto: 'Minotauros mortos.', effect: {preguica: 3}},
     ],
   },
   {
