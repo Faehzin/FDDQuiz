@@ -60,7 +60,7 @@ export const GODS = [
     dominio: 'Amor e Beleza',
     descricao:
       'Afrodite tem domínio do extremo oposto de seu secreto amante: o amor. Apaixonados, dedicados e singelos são seus filhos, que sempre vão estar confusos com alguma escolha de sim ou não. Os mais protetores entre todos os semideuses, amam com tamanha convicção que jamais podem deixar alguém do grupo morrer. Contudo, ninguém realmente AMA um filho de Afrodite...',
-    traits: { coragem: 0.2, sabedoria: -0.1, ordem: -0.4, astucia: 0.6, compaixao: 1, ambicao: 0.4, preguica: 0.3, confianca: 0.8 },
+    traits: { coragem: 0.2, sabedoria: -0.1, ordem: -0.4, astucia: 0.6, compaixao: 1, ambicao: 0.4, preguica: 0.6, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/afrodite.png',
   },
   {
