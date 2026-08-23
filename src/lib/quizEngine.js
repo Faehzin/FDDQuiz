@@ -104,12 +104,12 @@ export function weightedPick(rankedResults, topN = 3) {
 
 
 export const TRAIT_CALIBRATION_GODS = {
-  coragem:   { mean: 3.255, std: 2.224 },
-  sabedoria: { mean: 2.857, std: 2.683 },
-  ordem:     { mean: 3.294, std: 2.653 },
-  astucia:   { mean: 2.365, std: 2.914 },
-  compaixao: { mean: 0.771, std: 3.405 },
-  ambicao:   { mean: 2.814, std: 2.582 },
-  preguica:  { mean: 2.963, std: 2.629 },
-  confianca: { mean: 1.106, std: 2.735 },
+  coragem:   { mean: 2.1211, std: 2.7333 },
+  sabedoria: { mean: 5.5195, std: 3.9085 },
+  ordem:     { mean: 3.8750, std: 2.8845 },
+  astucia:   { mean: 2.7227, std: 2.9450 },
+  compaixao: { mean: 3.7344, std: 4.5284 },
+  ambicao:   { mean: 1.9375, std: 2.4736 },
+  preguica:  { mean: 3.0000, std: 3.0115 },
+  confianca: { mean: 1.6563, std: 2.8665 },
 };

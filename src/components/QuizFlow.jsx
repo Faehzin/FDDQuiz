@@ -4,7 +4,7 @@ import { AnimatePresence } from 'framer-motion';
 import QuestionCard from './QuestionCard';
 import ProgressBar from './ProgressBar';
 import { TRAITS } from '../data/traits';
-import { scoreUser, rankResults, weightedPick } from '../lib/quizEngine';
+import { scoreUser, rankResults, weightedPick, TRAIT_CALIBRATION_GODS } from '../lib/quizEngine';
 import { saveQuizResult } from '../lib/supabaseClient';
 
 /**
@@ -28,7 +28,7 @@ export default function QuizFlow({ tipoQuiz, questions, entities, resultSetter }
     }
 
     const vector = scoreUser(nextAnswers, TRAITS);
-    const ranked = rankResults(vector, entities, TRAITS);
+    const ranked = rankResults(vector, entities, TRAITS, TRAIT_CALIBRATION_GODS);
     const picked = weightedPick(ranked, 3);
 
     resultSetter({ entity: picked, vector });
