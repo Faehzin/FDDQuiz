@@ -42,7 +42,7 @@ export const GODS = [
     dominio: 'Sol, Profecia e Artes',
     descricao:
       'Deus da luz, da música e da profecia, Apolo é o próprio conceito da perfeição. Se a vida é uma arte, então Apolo é toda a vida. E claro, sua prole seria confiante, egocêntrica e naturalmente talentosa como o tal. Carismáticos, mas arrogantes, provavelmente se acham os melhores em tudo. Beijam muito bem.',
-    traits: { coragem: 0.4, sabedoria: 0.7, ordem: 0.4, astucia: 0.3, compaixao: 0.4, ambicao: 0.5, preguica: 0.5, confianca: 0.7 },
+    traits: { coragem: 0, sabedoria: 0.7, ordem: 0.4, astucia: -0.3, compaixao: 0.7, ambicao: 0.1, preguica: 0.5, confianca: 0.7 },
     imagem: 'src/assets/imagens/deuses/apolo.png',
   },
   {
@@ -51,7 +51,7 @@ export const GODS = [
     dominio: 'Guerra e Violência',
     descricao:
       'Ares é a personificação do ódio, seja ele qual for. Seus filhos são impulsivos e impacientes, e odeiam injustiça, maldade e covardia. Vão sair na porrada caso acreditem que é a coisa certa a se fazer. Se existe um jeito de acabar com o mal, é pela raiz.',
-    traits: { coragem: 1, sabedoria: -0.4, ordem: -0.5, astucia: -0.2, compaixao: -0.5, ambicao: 0.6, preguica: -0.3, confianca: 0.8 },
+    traits: { coragem: 1, sabedoria: 0.4, ordem: 0.5, astucia: -0.2, compaixao: -0.5, ambicao: 0.6, preguica: -0.3, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/ares.png',
   },
   {
@@ -59,8 +59,8 @@ export const GODS = [
     nome: 'Afrodite',
     dominio: 'Amor e Beleza',
     descricao:
-      'Afrodite tem domínio do extremo oposto de seu secreto amante: o amor. Apaixonados, dedicados e singelos são seus filhos, que sempre vão estar confusos com alguma escolha de sim ou não. Os mais protetores entre todos os semideuses, amam com tamanha convicção que jamais podem deixar alguém do grupo morrer. Contudo, ninugém realmente AMA um filho de Afrodite...',
-    traits: { coragem: 0.2, sabedoria: 0.1, ordem: -0.2, astucia: 0.6, compaixao: 1, ambicao: 0.4, preguica: 0.3, confianca: 0.8 },
+      'Afrodite tem domínio do extremo oposto de seu secreto amante: o amor. Apaixonados, dedicados e singelos são seus filhos, que sempre vão estar confusos com alguma escolha de sim ou não. Os mais protetores entre todos os semideuses, amam com tamanha convicção que jamais podem deixar alguém do grupo morrer. Contudo, ninguém realmente AMA um filho de Afrodite...',
+    traits: { coragem: 0.2, sabedoria: -0.1, ordem: -0.4, astucia: 0.6, compaixao: 1, ambicao: 0.4, preguica: 0.3, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/afrodite.png',
   },
   {
@@ -122,8 +122,8 @@ export const GODS = [
     nome: 'Nyx',
     dominio: 'Astros e intímo',
     descricao:
-      'Nyx é a rainha dos segredos, dos astros, estrelas e do próprio íntimo do humano. Ela lhe abraça quando guardas um segredo pessoal, quando coloca uma face que não é sua para agradar à outrém. Seus filhos são antenciosos, bons ouvintes e aconchegantes, como um céu estrelado.',
-    traits: { coragem: 0.3, sabedoria: 0.5, ordem: 0.2, astucia: 0.4, compaixao: 0.8, ambicao: 0.1, preguica: -0.1, confianca: 1 },
+      'Nyx é a rainha dos segredos, dos astros, estrelas e do próprio íntimo do humano. Ela lhe abraça quando guardas um segredo pessoal, quando coloca uma face que não é sua para agradar à outrém. Seus filhos são atenciosos, bons ouvintes e aconchegantes, como um céu estrelado.',
+    traits: { coragem: 0.3, sabedoria: 0.6, ordem: 0.2, astucia: 0.4, compaixao: 0.8, ambicao: 0.1, preguica: -0.1, confianca: 1 },
     imagem: 'src/assets/imagens/deuses/nyx.png',
   },
   {
@@ -132,7 +132,7 @@ export const GODS = [
     dominio: 'Morte',
     descricao:
       'O último suspiro é o mais belo de todos para Thânato. Nenhum mortal vai à Hades sem a presença deste ser carregando sua alma em seus braços. Seus filhos são serenos, cumprem promessas à risca e raramente demonstram o peso que carregam por dentro. Sempre gostam do final de todas as histórias, e odeiam fofocas inacabadas.',
-    traits: { coragem: 0.5, sabedoria: 0.6, ordem: 0.3, astucia: -0.1, compaixao: -0.9, ambicao: -0.2, preguica: -0.5, confianca: 0.8 },
+    traits: { coragem: 0.5, sabedoria: 0.7, ordem: 0.3, astucia: -0.1, compaixao: -0.9, ambicao: 0, preguica: 0.9, confianca: 0.3 },
     imagem: 'src/assets/imagens/deuses/thanatos.png',
   },
   {
@@ -141,7 +141,7 @@ export const GODS = [
     dominio: 'Justiça e Equilíbrio',
     descricao:
       'A Filha da Noite e guardiã da justiça divina, Nêmesis é o equilíbrio que pune o orgulho desmedido e recompensa a humildade. Seus filhos carregam o peso da justiça, sendo observadores implacáveis, nunca deixando um erro passar impune. Preferem morrer ao errar, e acreditam que seguir o certo é seguir o que foi prescrito pelos nossos antepassados.',
-    traits: { coragem: 0.5, sabedoria: 0.8, ordem: 1, astucia: 0.2, compaixao: -0.2, ambicao: 0.2, preguica: -0.4, confianca: 0.6 },
+    traits: { coragem: 0.5, sabedoria: 0.8, ordem: 1, astucia: -0.3, compaixao: -0.2, ambicao: 0.2, preguica: -0.4, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/nemesis.png',
   },
 ];

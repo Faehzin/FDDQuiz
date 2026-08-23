@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import LaurelDivider from '../components/LaurelDivider';
 import GreekFrame from '../components/GreekFrame';
+import atlasBg from '../assets/imagens/backgrounds/1.png';
 
 const QUIZZES = [
   {
@@ -23,7 +24,22 @@ const QUIZZES = [
 export default function Home() {
   return (
     <div className="mx-auto flex max-w-4xl flex-1 flex-col items-center justify-center gap-10 py-8 text-center">
-      <div>
+      <div className="relative">
+        {/* Ilustração decorativa "Atlas" — fácil de remover: apague este <img> e o import de atlasBg acima.
+            Deslocada mais para cima (fica atrás do título, não do parágrafo) e com uma máscara de
+            desvanecimento radial para não "cortar" com uma borda dura — em vez de uma linha divisória
+            para disfarçar o corte, a máscara resolve a causa: a arte deixa de ter uma borda visível. */}
+        <img
+          src={atlasBg}
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute left-1/2 top-[36%] -z-10 w-[130%] max-w-none -translate-x-1/2 -translate-y-1/2 opacity-[0.16] sm:w-[760px] sm:opacity-[0.2]"
+          style={{
+            WebkitMaskImage:
+              'radial-gradient(ellipse 60% 58% at 50% 38%, black 40%, transparent 82%)',
+            maskImage: 'radial-gradient(ellipse 60% 58% at 50% 38%, black 40%, transparent 82%)',
+          }}
+        />
         <p className="text-xs uppercase tracking-[0.4em] text-fdd-gold-light">Filhos do Destino</p>
         <h1 className="mt-4 font-display text-3xl leading-tight text-fdd-cream fdd-glow-text sm:text-5xl">
           Para todo Semideus, existe um destino pré-determinado. Descubra o seu!

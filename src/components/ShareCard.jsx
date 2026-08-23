@@ -1,82 +1,76 @@
-import { useRef, useState } from 'react';
-import { toPng } from 'html-to-image';
+import { forwardRef } from 'react';
+import Tilt from 'react-parallax-tilt';
 import EntityImage from './EntityImage';
 import GreekFrame from './GreekFrame';
+import CoinRing from './CoinRing';
+import LaurelWreath from './LaurelWreath';
 import { godImageMap, orgImageMap } from '../lib/assetImages';
 
-/** Card compartilhável (estilo sticker) combinando deus + organização. */
-export default function ShareCard({ god, org }) {
-  const cardRef = useRef(null);
-  const [downloading, setDownloading] = useState(false);
-  const [error, setError] = useState(false);
-
-  async function handleDownload() {
-    if (!cardRef.current) return;
-    setDownloading(true);
-    setError(false);
-    try {
-      const dataUrl = await toPng(cardRef.current, { pixelRatio: 2, cacheBust: true });
-      const link = document.createElement('a');
-      link.download = 'filhos-do-destino-resultado.png';
-      link.href = dataUrl;
-      link.click();
-    } catch (err) {
-      console.error('Falha ao gerar imagem do card:', err);
-      setError(true);
-    } finally {
-      setDownloading(false);
-    }
-  }
-
+function EntityMedallion({ kicker, entity, imageSrc }) {
   return (
-    <div className="flex flex-col items-center gap-5">
-      <div
-        ref={cardRef}
-        className="relative w-full max-w-sm overflow-hidden rounded-3xl bg-gradient-to-b from-fdd-bg-light to-fdd-bg-deep p-8 text-center text-fdd-cream"
-      >
-        <GreekFrame thickness={10} tile={20} className="text-fdd-gold" />
-        <div className="relative z-10">
-          <p className="text-xs uppercase tracking-[0.3em] text-fdd-gold-light">Filhos do Destino</p>
-          <p className="mt-1 font-display text-lg text-fdd-cream-dark">Meu resultado</p>
+    <div className="flex flex-col items-center gap-3">
+      <div className="relative h-24 w-24 sm:h-28 sm:w-28">
+        <CoinRing className="text-fdd-gold" />
+        <EntityImage
+          src={imageSrc}
+          nome={entity.nome}
+          className="absolute left-[11%] top-[11%] h-[78%] w-[78%] rounded-full object-cover"
+        />
+      </div>
+      <div>
+        <p className="text-[10px] font-semibold uppercase tracking-[0.25em] text-fdd-gold-dark">{kicker}</p>
+        <p className="font-display text-base text-fdd-ink sm:text-lg">{entity.nome}</p>
+      </div>
+    </div>
+  );
+}
 
-          <div className="mt-8 flex items-center justify-center gap-6">
+/**
+ * Card compartilhável (estilo sticker) combinando deus + organização.
+ * `ref` aponta para o nó capturado por html-to-image — deve ficar no
+ * conteúdo plano do card, não no wrapper de tilt (que aplica transform).
+ */
+const ShareCard = forwardRef(function ShareCard({ god, org }, ref) {
+  return (
+    <Tilt
+      tiltMaxAngleX={9}
+      tiltMaxAngleY={9}
+      perspective={1200}
+      scale={1.03}
+      transitionSpeed={1200}
+      glareEnable
+      glareMaxOpacity={0.35}
+      glareColor="#f3c46b"
+      glarePosition="all"
+      glareBorderRadius="28px"
+      className="mx-auto w-full max-w-md sm:max-w-lg"
+    >
+      <div
+        ref={ref}
+        className="relative overflow-hidden rounded-[28px] bg-fdd-cream p-8 text-center text-fdd-ink shadow-[0_25px_60px_-15px_rgba(0,0,0,0.65)] sm:p-10"
+      >
+        <GreekFrame thickness={14} tile={26} className="text-fdd-gold" />
+
+        <div className="relative z-10">
+          <LaurelWreath radius={30} count={10} className="mx-auto h-16 w-16 text-fdd-gold-dark" />
+          <p className="-mt-4 font-display text-xs uppercase tracking-[0.35em] text-fdd-gold-dark">
+            Filhos do Destino
+          </p>
+          <p className="mt-1 font-display text-2xl text-fdd-ink sm:text-3xl">Meu resultado</p>
+
+          <div className="mt-8 flex items-center justify-center gap-6 sm:gap-10">
             {god && (
-              <div className="flex flex-col items-center gap-2">
-                <EntityImage
-                  src={godImageMap[god.id]}
-                  nome={god.nome}
-                  className="h-24 w-24 rounded-full border-4 border-fdd-gold object-cover"
-                />
-                <p className="font-display text-sm text-fdd-gold-light">{god.nome}</p>
-              </div>
+              <EntityMedallion kicker="Parente divino" entity={god} imageSrc={godImageMap[god.id]} />
             )}
+            {god && org && <span className="font-display text-2xl text-fdd-gold-dark">&</span>}
             {org && (
-              <div className="flex flex-col items-center gap-2">
-                <EntityImage
-                  src={orgImageMap[org.id]}
-                  nome={org.nome}
-                  className="h-24 w-24 rounded-full border-4 border-fdd-gold object-cover"
-                />
-                <p className="font-display text-sm text-fdd-gold-light">{org.nome}</p>
-              </div>
+              <EntityMedallion kicker="Organização" entity={org} imageSrc={orgImageMap[org.id]} />
             )}
           </div>
         </div>
       </div>
-
-      <button
-        type="button"
-        onClick={handleDownload}
-        disabled={downloading}
-        className="rounded-full border-2 border-fdd-gold bg-fdd-gold/10 px-6 py-2 font-display text-sm tracking-wide text-fdd-gold-light transition hover:bg-fdd-gold/20 disabled:opacity-50"
-      >
-        {downloading ? 'Gerando...' : 'Baixar card'}
-      </button>
-      {error && (
-        <p className="text-xs text-fdd-cream-dark">
-          Não foi possível gerar a imagem agora — tente novamente.
-        </p>
-      )}
-    </div>
+    </Tilt>
   );
-}
+});
+
+export default ShareCard;

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useResults } from '../context/ResultsContext';
 import ResultDetail from '../components/ResultDetail';
-import ShareCard from '../components/ShareCard';
+import ShareSection from '../components/ShareSection';
 import LaurelDivider from '../components/LaurelDivider';
 import { godImageMap, orgImageMap } from '../lib/assetImages';
 
@@ -89,7 +89,7 @@ export default function Result() {
           <p className="mb-6 text-center text-xs uppercase tracking-[0.3em] text-fdd-gold-light">
             Card compartilhável
           </p>
-          <ShareCard god={godResult.entity} org={orgResult.entity} />
+          <ShareSection god={godResult.entity} org={orgResult.entity} />
         </div>
       )}
     </div>
