@@ -51,7 +51,7 @@ export const GODS = [
     dominio: 'Guerra e Violência',
     descricao:
       'Ares é a personificação do ódio, seja ele qual for. Seus filhos são impulsivos e impacientes, e odeiam injustiça, maldade e covardia. Vão sair na porrada caso acreditem que é a coisa certa a se fazer. Se existe um jeito de acabar com o mal, é pela raiz.',
-    traits: { coragem: 1, sabedoria: 0.4, ordem: 0.5, astucia: -0.2, compaixao: -0.5, ambicao: 0.6, preguica: -0.3, confianca: 0.8 },
+    traits: { coragem: 1, sabedoria: 0.4, ordem: 0.5, astucia: 0, compaixao: -0.1, ambicao: 0.6, preguica: -0.3, confianca: 0.8 },
     imagem: 'src/assets/imagens/deuses/ares.png',
   },
   {
@@ -123,7 +123,7 @@ export const GODS = [
     dominio: 'Astros e intímo',
     descricao:
       'Nyx é a rainha dos segredos, dos astros, estrelas e do próprio íntimo do humano. Ela lhe abraça quando guardas um segredo pessoal, quando coloca uma face que não é sua para agradar à outrém. Seus filhos são atenciosos, bons ouvintes e aconchegantes, como um céu estrelado.',
-    traits: { coragem: 0.3, sabedoria: 0.6, ordem: 0.2, astucia: 0.4, compaixao: 0.8, ambicao: 0.1, preguica: -0.1, confianca: 1 },
+    traits: { coragem: 0.3, sabedoria: 0.6, ordem: 0.2, astucia: 0.4, compaixao: 0.8, ambicao: 0, preguica: -0.1, confianca: 1 },
     imagem: 'src/assets/imagens/deuses/nyx.png',
   },
   {
