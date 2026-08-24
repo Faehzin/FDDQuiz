@@ -114,7 +114,7 @@ export const GODS = [
     dominio: 'Magia e encruzilhadas',
     descricao:
       'Guardiã silenciosa do oculto, Hécate toca tudo aquilo que não conseguimos compreender. Sua prolé é quieta, calma, reflexiva e estudiosa. Acreditam que toda palavra tem poder, confiam em cristais e estrelas. Supersticiosos, nunca diga algo ambíguo para um filho de Hécate: ele irá achar o resultado dessa encruzilhada.',
-    traits: { coragem: -0.1, sabedoria: 0.9, ordem: 0.6, astucia: -0.1, compaixao: 0.8, ambicao: -0.6, preguica: 0.1, confianca: -0.3 },
+    traits: { coragem: 0.1, sabedoria: 1, ordem: 0.6, astucia: -0.1, compaixao: 0.8, ambicao: -0.3, preguica: 0.1, confianca: -0.3 },
     imagem: 'src/assets/imagens/deuses/hecate.png',
   },
   {
