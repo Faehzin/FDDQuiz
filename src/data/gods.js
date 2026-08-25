@@ -105,7 +105,7 @@ export const GODS = [
     dominio: 'Força e Vitória',
     descricao:
       'Nike é sempre a primeira das divindades, em qualquer tema. Espalhando coragem e determinação por onde passa, seus filhos são grandes atletas, empresários ou investidores. Acreditam no trabalho duro, na perseverança e no aprendizado através do erro. ',
-    traits: { coragem: 0.8, sabedoria: 0.6, ordem: 0.3, astucia: 0.3, compaixao: -0.1, ambicao: 1, preguica: -0.8, confianca: 1 },
+    traits: { coragem: 0.8, sabedoria: 0.6, ordem: 0.1, astucia: 0.3, compaixao: -0.1, ambicao: 1, preguica: -0.3, confianca: 1 },
     imagem: 'src/assets/imagens/deuses/nike.png',
   },
   {
