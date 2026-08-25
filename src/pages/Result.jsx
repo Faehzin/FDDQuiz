@@ -92,6 +92,14 @@ export default function Result() {
           <ShareSection god={godResult.entity} org={orgResult.entity} />
         </div>
       )}
+
+      <Link
+        to="/mapa"
+        viewTransition
+        className="text-xs uppercase tracking-[0.2em] text-fdd-cream-dark underline decoration-fdd-gold-dark underline-offset-4 hover:text-fdd-gold-light"
+      >
+        Explorar o Mapa Mundi →
+      </Link>
     </div>
   );
 }
