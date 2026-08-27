@@ -10,6 +10,7 @@ const ACTOR_IMAGE_OVERRIDES = {
   sophia: 'atrizsophia',
   fissao: 'athorfissao',
   cassius: 'atorcassius',
+  diana: 'atrizdiana',
 };
 
 /**
