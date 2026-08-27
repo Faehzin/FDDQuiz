@@ -18,7 +18,7 @@ export default function Layout({ children }) {
       />
 
       <header className="relative z-10 flex items-center justify-center px-6 py-8">
-        <Link to="/" className="text-center">
+        <Link to="/quizes" className="text-center">
           <p className="font-display text-2xl tracking-[0.15em] text-fdd-gold-light fdd-glow-text sm:text-3xl">
             FILHOS DO DESTINO
           </p>

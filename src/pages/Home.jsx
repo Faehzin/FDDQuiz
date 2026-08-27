@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import LaurelDivider from '../components/LaurelDivider';
 import GreekFrame from '../components/GreekFrame';
 import atlasBg from '../assets/imagens/backgrounds/1.png';
+import { staggerContainer, fadeUp } from '../lib/motionVariants';
 
 const QUIZZES = [
   {
@@ -24,7 +25,7 @@ const QUIZZES = [
 export default function Home() {
   return (
     <div className="mx-auto flex max-w-4xl flex-1 flex-col items-center justify-center gap-10 py-8 text-center">
-      <div className="relative">
+      <motion.div className="relative" variants={staggerContainer} initial="hidden" animate="show">
         {/* Ilustração decorativa "Atlas" — fácil de remover: apague este <img> e o import de atlasBg acima.
             Deslocada mais para cima (fica atrás do título, não do parágrafo) e com uma máscara de
             desvanecimento radial para não "cortar" com uma borda dura — em vez de uma linha divisória
@@ -40,18 +41,28 @@ export default function Home() {
             maskImage: 'radial-gradient(ellipse 60% 58% at 50% 38%, black 40%, transparent 82%)',
           }}
         />
-        <p className="text-xs uppercase tracking-[0.4em] text-fdd-gold-light">Filhos do Destino</p>
-        <h1 className="mt-4 font-display text-3xl leading-tight text-fdd-cream fdd-glow-text sm:text-5xl">
+        <motion.p variants={fadeUp} className="text-xs uppercase tracking-[0.4em] text-fdd-gold-light">
+          Filhos do Destino
+        </motion.p>
+        <motion.h1
+          variants={fadeUp}
+          className="mt-4 font-display text-3xl leading-tight text-fdd-cream fdd-glow-text sm:text-5xl"
+        >
           Para todo Semideus, existe um destino pré-determinado. Descubra o seu!
-        </h1>
-        <LaurelDivider className="mx-auto mt-5 h-6 w-40 text-fdd-gold sm:h-7 sm:w-48" />
-        <p className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-fdd-cream-dark sm:text-base">
+        </motion.h1>
+        <motion.div variants={fadeUp}>
+          <LaurelDivider className="mx-auto mt-5 h-6 w-40 text-fdd-gold sm:h-7 sm:w-48" />
+        </motion.div>
+        <motion.p
+          variants={fadeUp}
+          className="mx-auto mt-6 max-w-xl text-sm leading-relaxed text-fdd-cream-dark sm:text-base"
+        >
           Em um mundo onde a mitologia grega é real, filhos de deuses com mortais caminham
           pela terra de Pandora e enfrentam diversos desafios. Aqui, o mundo INTEIRO sabe sobre a existência
           dos deuses, obrigando a humanidade a se adaptar à nova realidade. Descubra qual seria seu Parente Divino em
           FIlhos do Destino, além de qual organização você defenderia, com base na sua personalidade e seus ideais!
-        </p>
-      </div>
+        </motion.p>
+      </motion.div>
 
       <div className="grid w-full gap-6 sm:grid-cols-2">
         {QUIZZES.map((quiz, i) => (
@@ -59,7 +70,7 @@ export default function Home() {
             key={quiz.to}
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: i * 0.15 }}
+            transition={{ duration: 0.4, delay: 0.5 + i * 0.15 }}
             className="relative overflow-hidden rounded-3xl bg-fdd-cream p-6 text-fdd-ink shadow-2xl shadow-black/50 sm:p-8"
           >
             <GreekFrame thickness={10} tile={22} className="text-fdd-gold" />

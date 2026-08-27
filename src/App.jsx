@@ -1,6 +1,7 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { ResultsProvider } from './context/ResultsContext';
 import Layout from './components/Layout';
+import Landing from './pages/Landing';
 import Home from './pages/Home';
 import QuizGods from './pages/QuizGods';
 import QuizOrgs from './pages/QuizOrgs';
@@ -10,16 +11,43 @@ import MapaMundi from './pages/MapaMundi';
 function App() {
   return (
     <ResultsProvider>
-      <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/quiz/deuses" element={<QuizGods />} />
-          <Route path="/quiz/organizacoes" element={<QuizOrgs />} />
-          <Route path="/resultado" element={<Result />} />
-          <Route path="/mapa" element={<MapaMundi />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Layout>
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route
+          path="/quizes"
+          element={
+            <Layout>
+              <Home />
+            </Layout>
+          }
+        />
+        <Route
+          path="/quiz/deuses"
+          element={
+            <Layout>
+              <QuizGods />
+            </Layout>
+          }
+        />
+        <Route
+          path="/quiz/organizacoes"
+          element={
+            <Layout>
+              <QuizOrgs />
+            </Layout>
+          }
+        />
+        <Route
+          path="/resultado"
+          element={
+            <Layout>
+              <Result />
+            </Layout>
+          }
+        />
+        <Route path="/mapa" element={<MapaMundi />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
     </ResultsProvider>
   );
 }

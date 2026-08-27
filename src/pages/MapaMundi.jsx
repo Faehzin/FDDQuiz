@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { createPortal } from 'react-dom';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 import { FaArrowLeft, FaMinus, FaPlus } from 'react-icons/fa6';
 import MapMarker from '../components/MapMarker';
 import MapDetailPanel from '../components/MapDetailPanel';
@@ -169,9 +170,14 @@ export default function MapaMundi() {
         style={{ backgroundImage: `url(${patternBrick})`, backgroundRepeat: 'repeat', backgroundSize: '160px' }}
       />
 
-      <div className="relative z-10 flex items-center justify-between gap-4 border-b border-fdd-gold-dark/30 bg-fdd-bg-deep/95 px-4 py-3 sm:px-6">
+      <motion.div
+        initial={{ opacity: 0, y: -16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 flex items-center justify-between gap-4 border-b border-fdd-gold-dark/30 bg-fdd-bg-deep/95 px-4 py-3 sm:px-6"
+      >
         <Link
-          to="/resultado"
+          to="/"
           viewTransition
           className="flex shrink-0 items-center gap-2 rounded-full border border-fdd-gold-dark/40 px-3 py-1.5 text-xs uppercase tracking-[0.2em] text-fdd-cream-dark transition hover:border-fdd-gold hover:text-fdd-gold-light"
         >
@@ -185,9 +191,12 @@ export default function MapaMundi() {
           </p>
         </div>
         <div className="w-[68px] shrink-0 sm:w-[92px]" aria-hidden="true" />
-      </div>
+      </motion.div>
 
-      <div
+      <motion.div
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         ref={containerRef}
         className="relative flex-1 touch-none select-none overflow-hidden active:cursor-grabbing sm:cursor-grab"
         onMouseDown={handleDragStart}
@@ -259,9 +268,13 @@ export default function MapaMundi() {
             <FaMinus className="h-3.5 w-3.5" />
           </button>
         </div>
-      </div>
+      </motion.div>
 
-      <div className="relative z-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-fdd-gold-dark/30 bg-fdd-bg-deep/95 px-4 py-3 sm:justify-between sm:px-6">
+      <motion.div
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+        className="relative z-10 flex flex-wrap items-center justify-center gap-x-6 gap-y-3 border-t border-fdd-gold-dark/30 bg-fdd-bg-deep/95 px-4 py-3 sm:justify-between sm:px-6">
         <Link to="/resultado" viewTransition className={navLinkClass}>
           ← Voltar
         </Link>
@@ -281,7 +294,7 @@ export default function MapaMundi() {
         >
           Adquirir Fastplay
         </a>
-      </div>
+      </motion.div>
 
       <MapDetailPanel location={activeLocation} onClose={() => setActiveLocation(null)} />
 
