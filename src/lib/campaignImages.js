@@ -24,3 +24,10 @@ function buildSlugMap(modules) {
 }
 
 export const campaignImageMap = buildSlugMap(campaignModules);
+
+// Exporta também o mapa cru (caminho completo -> módulo), pra casos raros
+// onde dois arquivos com nomes diferentes só na extensão colidem no mesmo
+// slug (ex: lelio.PNG e lelio.webp viraram os dois "lelio" — o mais recente
+// nem sempre "ganha" da forma esperada). Ver PORTRAIT_PATH_OVERRIDES em
+// HeroCard.jsx pra esses casos específicos.
+export const campaignModulesByPath = campaignModules;

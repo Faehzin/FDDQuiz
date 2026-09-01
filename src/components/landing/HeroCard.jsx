@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { campaignImageMap } from '../../lib/campaignImages';
+import { campaignImageMap, campaignModulesByPath } from '../../lib/campaignImages';
 
 // Os arquivos de ator/atriz enviados não seguem um padrão único de nome
 // (athorfissao.jpg, atorcassius.jpg, atrizsophia.jpg), então mapeia
@@ -11,6 +11,23 @@ const ACTOR_IMAGE_OVERRIDES = {
   fissao: 'athorfissao',
   cassius: 'atorcassius',
   diana: 'atrizdiana',
+  lelio: 'atrizlelio',
+  dakota: 'atrizdakota',
+};
+
+// Retrato "oficial" quando o id do herói não é o slug certo pra usar — ex:
+// dakota.webp era um rascunho, dakotanovak.png é a versão final.
+const PORTRAIT_IMAGE_OVERRIDES = {
+  dakota: 'dakotanovak',
+};
+
+// Caso raro: dois arquivos com nomes iguais só diferindo na extensão (ex:
+// lelio.PNG e lelio.webp) colidem no mesmo slug em campaignImageMap, e qual
+// dos dois "ganha" depende da ordem alfabética do glob, não de qual é o mais
+// novo/melhor — nada intuitivo. Pra esses casos, aponta o caminho exato do
+// arquivo certo em vez de confiar no slug.
+const PORTRAIT_PATH_OVERRIDES = {
+  lelio: '../assets/imagens/campanha/lelio.PNG',
 };
 
 /**
@@ -32,7 +49,9 @@ const ACTOR_IMAGE_OVERRIDES = {
  */
 export default function HeroCard({ hero }) {
   const [flipped, setFlipped] = useState(false);
-  const image = campaignImageMap[hero.id];
+  const image =
+    campaignModulesByPath[PORTRAIT_PATH_OVERRIDES[hero.id]] ??
+    campaignImageMap[PORTRAIT_IMAGE_OVERRIDES[hero.id] ?? hero.id];
   const actorImage = campaignImageMap[ACTOR_IMAGE_OVERRIDES[hero.id]];
   const revealed = hero.unlocked && Boolean(image);
   const canFlip = revealed && Boolean(actorImage);
@@ -52,7 +71,13 @@ export default function HeroCard({ hero }) {
         <div className="flex h-full flex-col [backface-visibility:hidden]">
           <div className="relative aspect-[3/4] w-full bg-gradient-to-b from-fdd-gold-light to-fdd-gold">
             {revealed ? (
-              <img src={image} alt={hero.nome} className="h-full w-full object-cover object-top" />
+              <img
+                src={image}
+                alt={hero.nome}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover object-top"
+              />
             ) : (
               <div className="flex h-full w-full items-center justify-center">
                 <span className="font-display text-6xl text-fdd-ink/35">?</span>
@@ -71,7 +96,13 @@ export default function HeroCard({ hero }) {
         {canFlip && (
           <div className="absolute inset-0 flex h-full flex-col [backface-visibility:hidden] [transform:rotateY(180deg)]">
             <div className="relative aspect-[3/4] w-full bg-fdd-bg-deep">
-              <img src={actorImage} alt={`Ator de ${hero.nome}`} className="h-full w-full object-cover" />
+              <img
+                src={actorImage}
+                alt={`Ator de ${hero.nome}`}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="flex-1 bg-fdd-bg-deep px-3 py-4 text-center">
               <p className="text-[10px] uppercase tracking-[0.15em] text-fdd-gold-light">Interpretado por</p>

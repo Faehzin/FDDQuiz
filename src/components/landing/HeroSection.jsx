@@ -65,6 +65,14 @@ export default function HeroSection() {
               Visitar o Mapa
             </Link>
           </motion.div>
+          <motion.div variants={fadeUp} className="mt-5">
+            <Link
+              to="/profecias"
+              className="text-xs uppercase tracking-[0.2em] text-fdd-cream-dark underline decoration-fdd-gold-dark underline-offset-4 transition hover:text-fdd-gold-light"
+            >
+              Conferir sua profecia →
+            </Link>
+          </motion.div>
         </motion.div>
 
         <ZeusArt />

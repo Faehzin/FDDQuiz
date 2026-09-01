@@ -21,7 +21,15 @@ function LocationCard({ location }) {
       className="overflow-hidden rounded-2xl border border-fdd-gold-dark/30 bg-fdd-bg-deep/60"
     >
       <div className="aspect-[4/3] w-full bg-gradient-to-br from-fdd-bg-light to-fdd-bg-deep">
-        {image && <img src={image} alt={location.nome} className="h-full w-full object-cover" />}
+        {image && (
+          <img
+            src={image}
+            alt={location.nome}
+            loading="lazy"
+            decoding="async"
+            className="h-full w-full object-cover"
+          />
+        )}
       </div>
       <div className="p-6">
         <p className="text-[10px] uppercase tracking-[0.25em] text-fdd-gold-light">{location.tag}</p>

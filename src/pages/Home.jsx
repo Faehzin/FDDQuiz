@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import LaurelDivider from '../components/LaurelDivider';
 import GreekFrame from '../components/GreekFrame';
-import atlasBg from '../assets/imagens/backgrounds/1.png';
+import atlasBg from '../assets/imagens/backgrounds/1.webp';
 import { staggerContainer, fadeUp } from '../lib/motionVariants';
 
 const QUIZZES = [
